@@ -1,0 +1,123 @@
+body {
+  display: grid;
+  grid-template: 3rem auto/3fr 1fr;
+}
+.header {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #003157;
+  color: #fff;
+  z-index: 1;
+}
+.main {
+  grid-column: 1/2;
+}
+.carrusel {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.overlay p {
+  max-width: 700px;
+}
+.form {
+  height: 100vh;
+  width: 25%;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  background: #003157;
+  color: #fff;
+  position: fixed;
+  right: 0;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__socialMedia {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer__socialMedia i {
+  cursor: pointer;
+  font-size: 2rem;
+}
+.btn-primary {
+  background: #003157;
+  color: #fff;
+  border: solid 2px #003157;
+}
+.btn-outline-primary {
+  color: #fff;
+  border: solid 2px #fff;
+}
+.btn-outline-primary:focus {
+  outline: none;
+}
+.btn-outline-secondary {
+  color: #fff;
+  border: solid 2px #fff;
+}
+.btn-outline-secondary:focus {
+  outline: none;
+}
+@media screen and (max-width: 1025px) {
+  body {
+    grid-template: 3rem auto/1fr;
+  }
+  .header {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .main {
+    grid-column: auto;
+  }
+  .form {
+    width: 100%;
+    height: auto;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    position: relative;
+    display: grid;
+  }
+}
+@media screen and (max-width: 769px) {
+  .overlay {
+    top: 60%;
+  }
+}
+@media screen and (max-height: 321px) {
+  .overlay p {
+    display: none;
+  }
+}
+@media screen and (max-width: 412px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+  .overlay p {
+    display: none;
+  }
+}
